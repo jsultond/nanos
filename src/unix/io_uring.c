@@ -590,6 +590,9 @@ static void iour_rw(io_uring iour, fdesc f, boolean write, void *addr, u32 len,
     io_completion completion = 0;
     if (!op) {
         err = -EOPNOTSUPP;
+    } else if ((write && !file_is_writable(f)) ||
+            (!write && !file_is_readable(f))) {
+        err = -EBADF;
     } else {
         completion = closure(iour->h, iour_rw_complete, iour, f, user_data);
         if (completion == INVALID_ADDRESS)

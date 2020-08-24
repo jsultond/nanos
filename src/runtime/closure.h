@@ -33,6 +33,7 @@
 #define closure_struct(__name, __field) struct _closure_##__name __field;
 
 #define closure_ref(__name, __var) struct _closure_##__name *__var = 0;
+#define closure_cast(__name, __var) ((struct _closure_##__name *)(__var))
 
 struct _closure_common {
     char *name;
