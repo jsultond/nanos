@@ -35,6 +35,7 @@
 #include <kernel.h>
 #include <page.h>
 #include <lwip/netif.h>
+#include <system_structs.h>
 #include <hyperv_internal.h>
 #include <hyperv.h>
 #include <vmbus.h>

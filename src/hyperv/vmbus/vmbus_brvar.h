@@ -31,6 +31,8 @@
 #ifndef _VMBUS_BRVAR_H_
 #define _VMBUS_BRVAR_H_
 
+#include <system_structs.h>
+
 struct vmbus_br {
 	struct vmbus_bufring	*vbr;
 	uint32_t		vbr_dsize;	/* total data size */

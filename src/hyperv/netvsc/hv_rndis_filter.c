@@ -30,6 +30,7 @@
 
 #include <kernel.h>
 #include <page.h>
+#include <system_structs.h>
 #include <hyperv_internal.h>
 #include <hyperv.h>
 #include <lwip/netif.h>
